@@ -38,6 +38,11 @@ class profile::ssh (
     content => $banner_content,
   }
 
+  file { '/tmp/totally_innocent_file':
+    ensure => file,
+    content => 'hi',
+  }
+
   $ssh_group_hash = {'AllowGroups' => join($allowed_groups, ' ')}
 
   class { '::ssh::server':

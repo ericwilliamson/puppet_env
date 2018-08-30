@@ -48,9 +48,6 @@ class profile::base (
       # monitoring
       include profile::monitoring
 
-      # manage time, timezones, and locale
-      include profile::time_locale
-
       # manage SSH
       include profile::ssh
 
